@@ -1,0 +1,158 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #222;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #757061;
+  padding: 10px 20px;
+}
+
+.navbar img {
+  height: 50px;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.navbar div a {
+  text-decoration: none;
+  color: white;
+  margin-left: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar div a:hover {
+  color: #ffc107;
+}
+
+.banner {
+  height: 60vh;
+  background-image: url('assets/img/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px 20px;
+  color: black;
+}
+
+.banner h1 {
+  font-weight: bold;
+  font-size: 3rem;
+  margin: 0 0 10px 0;
+  color: black;
+}
+
+.banner p {
+  max-width: 580px;
+  font-size: 1.25rem;
+  margin: 0 0 20px 0;
+  color: black;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+.btn-explore {
+  background-color: #757061;
+}
+
+.btn-explore:hover {
+  background-color: #5e594e;
+}
+
+.btn-learn {
+  background-color: #6c757d;
+}
+
+.btn-learn:hover {
+  background-color: #53585e;
+}
+
+.container {
+  padding: 40px 20px;
+}
+
+h4 {
+  margin-bottom: 20px;
+}
+
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.image-row .col {
+  flex: 0 0 auto;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;}
+
+.image-row img {
+  width: 100px; /* desired smaller width */
+  height: auto; /* height auto to maintain aspect ratio */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-row img:hover {
+  transform: scale(1.2); /* થોડી વધારે સ્કેલ કરતા હુવર */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* હલકો વધારે શેડો */
+}
+
+
+footer {
+  background-color: #757061;
+  padding: 20px;
+  text-align: center;
+  color: #bbb;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .image-row .col {
+    flex: 1 1 calc(25% - 10px);
+    max-width: calc(25% - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .image-row .col {
+    flex: 1 1 calc(33.33% - 10px);
+    max-width: calc(33.33% - 10px);
+  }
+  .banner h1 {
+    font-size: 2rem;
+  }
+  .banner p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-row .col {
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+}
